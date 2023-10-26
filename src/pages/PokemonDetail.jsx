@@ -25,10 +25,10 @@ const PokemonDetail = () => {
     },[])
 
     return (
-    <main className="text-center capitalize">
+    <main className="text-center capitalize ">
         <HeaderPokeball/>
 
-        <article className="max-w-[1100px] mx-auto px-4 mt-[150px]">
+        <article className="max-w-[1100px] mx-auto px-4 mt-[150px] ">
             <div className={`h-[150px] w-full ${bgColor} relative`}>
                 <div className="absolute h-[250px] w-[250px] left-1/2 -translate-x-1/2 top-[-80%]">
                     <img src={pokemon?.sprites.other["official-artwork"].front_default} alt="" />
@@ -87,17 +87,18 @@ const PokemonDetail = () => {
             </section>
 
                  
-            <section className="mt-6">
+            <section className="my-6">
                 <SectionTitle title='Movements'/>   
             
                 <ul className="flex flex-wrap justify-normal gap-4 mt-6">
                     {
                         pokemon?.moves.map(move => <li key={move.move.name} className="capitalize">
-                            <div className='h-[60px] w-auto px-8 py-4 flex justify-center items-center rounded-[50px] bg-[#E5E5E5]'><span className="font-[Roboto] text-2xl font-normal text-[#302F2F]">{move.move.name}</span></div>
+                            <div className='h-[40px] px-4 sm:h-[60px] w-auto sm:px-8 sm:py-4 flex justify-center items-center rounded-[50px] bg-[#E5E5E5] transition-all'><span className="text-base font-[Roboto] sm:text-2xl font-normal text-[#302F2F] ">{move.move.name}</span></div>
                         </li>)
                     }
                 </ul>
             </section>
+            <br/>
         </article>
     </main>
     )

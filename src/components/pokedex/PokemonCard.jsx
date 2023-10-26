@@ -20,11 +20,11 @@ const PokemonCard = ({pokemonUrl}) => {
 
     return (
         <Link to={`/pokedex/${pokemon?.id}`}>
-            <article className="rounded-lg h-[383px] w-full relative" style={{border: '8px solid '+ borderColor}}>
+            <article className="rounded-lg h-[383px] w-full relative hover:[box-shadow:_0_5px_15px_rgba(3,89,92,0.5)] " style={{border: '8px solid '+ borderColor}}>
                 <div className="absolute w-[102%] h-2 top-0 left-[-2px]" style={{background: borderColor}}></div>  
                 <header className={`w-full h-[128px] relative rounded-t-lg ${bgColor}`}>
                     <div className="w-[162px] h-[149px] absolute left-1/2 -translate-x-1/2 top-[10%] z-20">
-                        <img src={pokemon?.sprites.other["official-artwork"].front_default} alt="" />
+                        <img className={pokemon?.sprites.other["official-artwork"].front_default ? '' : 'w-full h-full object-scale-down object-center'} src={pokemon?.sprites.other["official-artwork"].front_default ? pokemon?.sprites.other["official-artwork"].front_default : '/images/no-pokemon-image.png'} alt="" />
                     </div>
                 </header>
                 <div className="mt-[45px] flex justify-center items-center flex-col">

@@ -2,8 +2,8 @@ const HeaderPokeball = () => {
   return (
     <header>
       <div className="bg-[#DD1A1A] h-[100px] w-full relative">
-        <div className="absolute z-10 left-[10%] top-[40%] h-[75px]">
-          <img className="h-[50px] sm:h-full " src="/images/logo.png" alt="Pokemon logo" />
+        <div className="absolute z-10 left-[3%] top-[40%] h-[75px] sm:left-[10%] transition-all">
+          <img className="h-[50px] sm:h-full transition-all" src="/images/logo.png" alt="Pokemon logo" />
         </div>
       </div>
       <div className="bg-[#0C0C0C] h-[50px] w-full relative">

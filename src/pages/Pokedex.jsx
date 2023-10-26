@@ -82,12 +82,19 @@ const Pokedex = () => {
                 </p>
                 
                 <form className="flex justify-between flex-wrap gap-4" onSubmit={handleSubmit}>
-                    <div>
+                    <div className="relative">
+                        <input className='rounded-[20px] [box-shadow:_#EDEDED_0_10px_10px] bg-[#FFF] p-[15px] h-[50px] placeholder:text-[#D3D3D3] placeholder:text-xl placeholder:font-medium placeholder:px-2 text-xl font-medium min-w-[280px] ' name="pokemonName" type="text" placeholder="Looking for a pokemon" autoComplete="off"/>
+                        <button className="bg-[#FF5350] h-[40px] w-[40px] rounded-[10px] cursor-pointer text-white text-2xl font-medium [box-shadow:_#ff535088_5px_5px_15px] hover:bg-red-700 absolute top-[15%] right-3"><i className='bx bx-search-alt-2'></i></button>
+                    </div>
+                    {/* <div>
                         <input className='bg-[#FFF] [box-shadow:_0px_3px_6px_0px_rgba(0,0,0,0.15)] h-[40px] placeholder:text-[#D3D3D3] placeholder:text-xl placeholder:font-medium placeholder:px-2 text-xl font-medium px-2 min-w-[150px] rounded-l-md' name="pokemonName" type="text" placeholder="Looking for a pokemon" autoComplete="off"/>
                         <button className="bg-red-500 text-white h-[40px] min-w-[100px] text-l font-medium rounded-r-md border-[#D93F3F] border-2 hover:bg-red-700">Search</button>
-                    </div>
+                    </div> */}
+
+                    
+                    
                     <div className="relative w-[300px] after:content-[''] after:absolute after:right-[8px] after:top-1/2 after:mt-[-4px] after:border-t-[8px] after:border-t-[#ccc] after:border-l-[6px] after:border-l-transparent after:border-r-[6px] after:border-r-transparent after:pointer-events-none">
-                        <select onChange={handleChangeType} className="capitalize h-[40px] bg-[#FFF] w-full outline-none text-lg font-normal text-[#0F0F2D] px-2 rounded-md appearance-none [box-shadow:_0px_3px_6px_0px_rgba(0,0,0,0.15)] border-none" >
+                        <select onChange={handleChangeType} className="capitalize h-[50px] bg-[#FFF] w-full outline-none text-lg font-normal text-[#0F0F2D] px-2 rounded-md appearance-none [box-shadow:_0px_3px_6px_0px_rgba(0,0,0,0.15)] border-none" >
                             <option value="" className="hover:bg-[#ED8F8F] hover:text-[#FFF]">All pokemons</option>
                             {types?.map(type => <option className="hover:bg-[#ED8F8F] hover:text-[#FFF]" value={type.name} key={type.url}>{type.name}</option>)}
                         </select>
