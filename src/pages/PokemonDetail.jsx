@@ -31,7 +31,7 @@ const PokemonDetail = () => {
         <article className="max-w-[1100px] mx-auto px-4 mt-[150px] ">
             <div className={`h-[150px] w-full ${bgColor} relative`}>
                 <div className="absolute h-[250px] w-[250px] left-1/2 -translate-x-1/2 top-[-80%]">
-                    <img src={pokemon?.sprites.other["official-artwork"].front_default} alt="" />
+                    <img className={pokemon?.sprites.other["official-artwork"].front_default ? '' : 'w-full h-full object-scale-down object-center'} src={pokemon?.sprites.other["official-artwork"].front_default ? pokemon?.sprites.other["official-artwork"].front_default : '/images/no-pokemon-image.png'} alt="" />
                 </div>
             </div>
 
