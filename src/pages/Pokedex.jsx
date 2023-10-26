@@ -83,7 +83,7 @@ const Pokedex = () => {
                 
                 <form className="flex justify-between flex-wrap gap-4" onSubmit={handleSubmit}>
                     <div>
-                        <input className='bg-[#FFF] [box-shadow:_0px_3px_6px_0px_rgba(0,0,0,0.15)] h-[40px] placeholder:text-[#D3D3D3] placeholder:text-xl placeholder:font-medium placeholder:px-2 text-xl font-medium px-2 min-w-[200px] rounded-l-md' name="pokemonName" type="text" placeholder="Looking for a pokemon" autoComplete="off"/>
+                        <input className='bg-[#FFF] [box-shadow:_0px_3px_6px_0px_rgba(0,0,0,0.15)] h-[40px] placeholder:text-[#D3D3D3] placeholder:text-xl placeholder:font-medium placeholder:px-2 text-xl font-medium px-2 min-w-[150px] rounded-l-md' name="pokemonName" type="text" placeholder="Looking for a pokemon" autoComplete="off"/>
                         <button className="bg-red-500 text-white h-[40px] min-w-[100px] text-l font-medium rounded-r-md border-[#D93F3F] border-2 hover:bg-red-700">Search</button>
                     </div>
                     <div className="relative w-[300px] after:content-[''] after:absolute after:right-[8px] after:top-1/2 after:mt-[-4px] after:border-t-[8px] after:border-t-[#ccc] after:border-l-[6px] after:border-l-transparent after:border-r-[6px] after:border-r-transparent after:pointer-events-none">

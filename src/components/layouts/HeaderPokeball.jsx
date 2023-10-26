@@ -3,15 +3,15 @@ const HeaderPokeball = () => {
     <header>
       <div className="bg-[#DD1A1A] h-[100px] w-full relative">
         <div className="absolute z-10 left-[10%] top-[40%] h-[75px]">
-          <img className="h-full " src="/images/logo.png" alt="Pokemon logo" />
+          <img className="h-[50px] sm:h-full " src="/images/logo.png" alt="Pokemon logo" />
         </div>
       </div>
       <div className="bg-[#0C0C0C] h-[50px] w-full relative">
-        <div className="w-[100px] h-[100px] absolute right-[5%] top-[-67%] -translate-x-1/2">
+        <div className="absolute right-[2%] top-[-50%] w-[95px] h-[95px] sm:w-[105px] sm:h-[105px] ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="117"
-            height="117"
+            width="100%"
+            height="100%"
             viewBox="0 0 117 117"
             fill="none"
           >

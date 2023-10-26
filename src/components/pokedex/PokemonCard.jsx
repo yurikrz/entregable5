@@ -7,7 +7,7 @@ const PokemonCard = ({pokemonUrl}) => {
     const [pokemon, setPokemon] = useState(null)
     const types =  pokemon?.types.map((type) => type.type.name.replace(type.type.name[0],type.type.name[0].toUpperCase())).join(' / ')
     const bgColor = bgByType[pokemon?.types[0].type.name]
-    const borderColor = 'border-[' + colorByType[pokemon?.types[0].type.name] +']'
+    const borderColor = colorByType[pokemon?.types[0].type.name] 
     
     useEffect(()=>{
         axios
@@ -20,8 +20,8 @@ const PokemonCard = ({pokemonUrl}) => {
 
     return (
         <Link to={`/pokedex/${pokemon?.id}`}>
-            <article className={`rounded-lg h-[383px] w-full ${borderColor} border-8 relative`}>
-                <div className="absolute w-[102%] h-2 top-0 left-[-2px]" style={{background: colorByType[pokemon?.types[0].type.name]}}></div>  
+            <article className="rounded-lg h-[383px] w-full relative" style={{border: '8px solid '+ borderColor}}>
+                <div className="absolute w-[102%] h-2 top-0 left-[-2px]" style={{background: borderColor}}></div>  
                 <header className={`w-full h-[128px] relative rounded-t-lg ${bgColor}`}>
                     <div className="w-[162px] h-[149px] absolute left-1/2 -translate-x-1/2 top-[10%] z-20">
                         <img src={pokemon?.sprites.other["official-artwork"].front_default} alt="" />
